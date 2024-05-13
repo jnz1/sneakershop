@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+
+body {
+    background-image: url('./bkground.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-brand {
+    font-family: 'Poetsen One', cursive;
+}
+
+.navbar-brand,
+        .nav-link {
+            font-family: 'Poetsen One', cursive;
+        }
+
+h1 {
+    font-size: 2.5rem;
+    color: antiquewhite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-family: 'Poetsen One';
+}
+        
+
+#purchases .purchase {
+    background-color: #f8f8f8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 48px 16px 16px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#purchases .purchase .purchase-id {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Poetsen One';
+
+}
+
+#purchases .purchase .purchase-date {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    opacity: 0.8;
+    font-family: 'Poetsen One';
+
+}
+#purchases .purchase p {
+    margin: 0;
+}
+#purchases .purchase img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+#purchases .purchase .products {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#purchases .purchase .product {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+#purchases .purchase .product-info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poetsen One';
+
+}
+
+
+#purchases .purchase .product-price {
+    display: flex;
+
+}
+
+
+#purchases .purchase .product-price p {
+    margin-right: 8px;
+
+}
+
+
+#purchases .purchase .purchase-total {
+    flex: 1;
+    max-width: 100px;
+    text-align: right;
+    font-family: 'Poetsen One';
+
+}

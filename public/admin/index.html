@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ecommerce-app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Shop Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/indexAdmin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body id="admin-home" ng-controller="AdminHomeController">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">Sneaker Shop Admin</a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/admin" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active" aria-current="page">Site</a>
+                    </li>
+                    <li class="nav-item">
+                        <button ng-click="logout()" class="nav-link">Sair</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-md-10">
+                <h1 class="Listagem-de-produtos">Listagem de produtos</h1>
+            </div>
+            <div class="col-md-2">
+                <a href="/admin/create-product.html" class="btn btn-primary custom-btn">Adicionar Produto</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped align-middle">
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Imagem</th>
+                        <th class="actions-col">Ações</th>
+                    </tr>
+                    <tr ng-repeat="product in products">
+                        <td>{{product.id}}</td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price | currency}}</td>
+                        <td><img src="{{product.imageUrl}}" alt="{{product.name}}"></td>
+                        <td>
+                            <a href="/admin/edit-product.html?productId={{product.id}}" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"
+                                    viewBox="0 0 256 256">
+                                    <path
+                                        d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <button ng-click="deleteProduct(product.id)" type="button" class="btn btn-danger">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"
+                                    viewBox="0 0 256 256">
+                                    <path
+                                        d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr ng-if="products.length == 0">
+                        <td colspan="5" class="text-center">
+                            Nenhum produto cadastrado.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/lib/jwt-decode.js"></script>
+    <script src="../assets/js/services/admin.service.js"></script>
+    <script src="../assets/js/services/session.service.js"></script>
+    <script src="../assets/js/controllers/admin-home.controller.js"></script>
+</body>
+
+</html>

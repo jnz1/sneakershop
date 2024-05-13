@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(108, 108, 108), black);
+    font-family: 'Poetsen One', cursive;
+    color: antiquewhite;
+}
+
+.navbar-brand {
+    font-family: 'Poetsen One', cursive;
+}
+
+.navbar-brand,
+        .nav-link {
+            font-family: 'Poetsen One', cursive;
+        }
+
+
+        #edit-product form {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        #edit-product form img {
+            position: absolute;
+            top: 50%;
+            min-height: 20px;
+            left: calc(100% + 32px);
+            width: 200px;
+            transform: translateY(-50%);
+        }
+
+        .btn-primary, .btn-secondary{
+            background-color: antiquewhite;
+            border-color: black;
+            font-family: 'Poetsen One', sans-serif;
+            color: black;
+        }
+        
+        .btn-primary:hover {
+            background-color: black;
+            border-color: black;
+        }
+        .btn-secondary:hover {
+            background-color: black;
+            border-color: black;
+        }
+        

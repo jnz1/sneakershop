@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+body {
+    background-image: url('./bkground.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-brand {
+    font-family: 'Poetsen One', cursive;
+}
+
+.navbar-brand,
+        .nav-link {
+            font-family: 'Poetsen One', cursive;
+        }
+
+h1 {
+    font-size: 2.5rem;
+    color: antiquewhite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-family: 'Poetsen One';
+}
+
+.card {
+    margin-bottom: 20px;
+    font-family: 'Poetsen One';
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-family: 'Poetsen One';
+}
+
+.card-text {
+    color: #555;
+}
+
+.btn-primary {
+    background-color: antiquewhite;
+    border-color: black;
+    font-family: 'Poetsen One';
+}
+
+.btn-primary:hover {
+    background-color:black;
+    border-color: black;
+}
+
+.alert-light {
+    background-color: black;
+    color: #333;
+    border-color: #ffffff;
+}
+
+.btn {
+    color: black;
+    font-family: 'Poetsen One', cursive;
+}

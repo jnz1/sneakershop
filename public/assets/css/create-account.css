@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+#login-page .card,
+#create-account-page .card {
+    width: 400px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../css/bkground.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poetsen One';
+}
+.card {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    color: antiquewhite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(87, 87, 87, 0.9);
+}
+
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.text-danger {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: antiquewhite;
+    border-color: black;
+    color: black;
+    transition: background-color 0.3s ease;
+    font-family: 'Poetsen One', cursive;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    border-color: black;
+    color: antiquewhite;
+}
+
+.btn-link {
+    color: antiquewhite;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Poetsen One', cursive;
+}
+
+.btn-link:hover {
+    color: black;
+}
